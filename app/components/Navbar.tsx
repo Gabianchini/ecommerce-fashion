@@ -15,7 +15,7 @@ const Navbar = (props:Props) => {
         <div>
             <div className="flex items-center justify-between py-4 relative">
                 <div className="flex items-center md:space-x-10 lg:space-x-20">
-                    <div className="font-semibold text-2xl"><a href="/">SEINE</a> </div>
+                    <div className="font-semibold text-2xl"><a href="/">TrendVogue</a> </div>
                     <nav className="max-md:hidden">
                         <ul className="flex items-center lg:space-x-10 space-x-7 opacity-70 text-[15px]">
                             <li><a href="/" className="py-3 inline-block w-full">Shop</a></li>
