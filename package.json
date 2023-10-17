@@ -11,13 +11,17 @@
   "dependencies": {
     "@planetscale/database": "^1.11.0",
     "@prisma/client": "^5.4.1",
+    "@tiptap/pm": "^2.1.12",
+    "@tiptap/react": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
     "next": "13.5.4",
     "next-auth": "^4.23.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-pick-color": "^2.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
