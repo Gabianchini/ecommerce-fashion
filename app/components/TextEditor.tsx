@@ -9,15 +9,17 @@ const TextEditor = ({editor}: Props) => {
         <div>
             <div className="mt-6 border-[1px] rounded-lg">
                 <div className="flex items-center justify-around">
-                        <button
+                       {/*  <button
                         type="button"
                         onClick={() => editor?.chain().focus().toggleBold().run()}
                         disabled = {!editor?.can().chain().focus().toggleBold().run()}
                         className={editor?.isActive("bold") ? "bg-gray-800 text-white p-3":"bg-gray-100 text-black p-3"}>
-                        Bold</button>    
+    Bold</button>   */} 
                  </div>
 
             </div>
         </div>
     )
 }
+
+export default TextEditor

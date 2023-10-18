@@ -190,3 +190,5 @@ const Productform = (props: Props) => {
     </div>
   )
 }
+
+export default Productform

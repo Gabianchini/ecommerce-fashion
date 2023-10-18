@@ -1,17 +1,16 @@
 import type { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
-import prisma from "@/app/prismadb";
-import bcrypt from "bcrypt";
-import axios from "axios";
+import CredentialsProvider  from "next-auth/providers/credentials";
+import prisma from "@/app/prismadb"
+import bcrypt from "bcrypt"
 
 export const options:NextAuthOptions = {
-    providers: [
+    providers:[
         CredentialsProvider({
             name:"Credentials",
             credentials:{
                 email:{
                     label:'email',
-                    type: 'text',
+                    type:'text',
                     placeholder:'your email'
                 },
                 password:{
@@ -21,7 +20,7 @@ export const options:NextAuthOptions = {
                 }
             },
             async authorize(credentials){
-
+                
                 if(!credentials?.email || !credentials?.password){
                     throw new Error('Invalid credentials')
                 }
@@ -30,20 +29,22 @@ export const options:NextAuthOptions = {
                         email:credentials.email
                     }
                 })
+
                 if(!user || !user?.password){
                     throw new Error('Invalid credentials')
                 }
+
                 const isCorrectedPassword = await bcrypt.compare(
                     credentials.password,
                     user.password
                 )
+
                 if(!isCorrectedPassword){
                     throw new Error('Invalid credentials')
                 }
 
                 return user;
             }
-        
         })
     ],
     pages:{
@@ -57,7 +58,7 @@ export const options:NextAuthOptions = {
             }
             return session
         },
-        jwt:async ({user,token}) => {
+        jwt: async ({user, token}) => {
             if(user){
                 token.uid = user.id
             }
@@ -70,3 +71,4 @@ export const options:NextAuthOptions = {
     secret: process.env.NEXTAUTH_SECRET,
     debug:process.env.NODE_ENV === 'development'
 }
+
