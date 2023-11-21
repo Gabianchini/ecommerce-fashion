@@ -12,7 +12,7 @@ type Props = {
   setAllHexValues:React.Dispatch<React.SetStateAction<string[]>>
   selectedAllHexValues:string[]
   setSelectedAllHexValues:React.Dispatch<React.SetStateAction<string[]>>
-  price:{min:number, max:number}
+  price:{min:number; max:number}
   setPrice: React.Dispatch<React.SetStateAction<{min:number,max:number}>>
 
 }
@@ -20,19 +20,18 @@ type Props = {
 const Filter = (props: Props) => {
   const [showFilter, setShowFilter] = useState<boolean>(false);
   
+  
   const handleMinChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value =
-      e.target.name === "min" ? parseInt(e.target.value) : e.target.value;
+    const value = e.target.name === "min" ? parseInt(e.target.value) : e.target.value;
     props.setPrice({
       ...props.price,
       [e.target.name]: value,
     });
   };
-
+  
   const handleMaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value =
-      e.target.name === "max" ? parseInt(e.target.value) : e.target.value;
-      props.setPrice({
+    const value = e.target.name === "max" ? parseInt(e.target.value) : e.target.value;
+    props.setPrice({
       ...props.price,
       [e.target.name]: value,
     });
@@ -97,8 +96,8 @@ const Filter = (props: Props) => {
         categories:props.selectedCategories,
         size:props.selectedSize,
         price:{
-          min:props.price.min,
-          max:props.price.max
+          min:props.price?.min,
+          max:props.price?.max
         },
         colors:props.selectedAllHexValues
       },
@@ -125,7 +124,7 @@ const Filter = (props: Props) => {
         <div className="flex flex-col py-3 pb-5 text-sm text-neutral-600 border-b-[0.5px]">
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Blouses") ? "bg-purple-500" : ""
+              props.selectedCategories && props.selectedCategories.includes("Blouse") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Blouse")}
           >
@@ -134,7 +133,7 @@ const Filter = (props: Props) => {
 
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Blouses") ? "bg-purple-500" : ""
+              props.selectedCategories && props.selectedCategories.includes("Shirt") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Shirt")}
           >
@@ -142,7 +141,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Denim&Jeans") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Denim&Jeans") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Denim&Jeans")}
           >
@@ -150,7 +149,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Party") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Party") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Party")}
           >
@@ -158,7 +157,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Pants") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Pants") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Pants")}
           >
@@ -166,7 +165,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Skirts") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Skirts") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Skirts")}
           >
@@ -174,7 +173,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Tops&tees") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Tops&tees") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Tops&tees")}
           >
@@ -182,7 +181,7 @@ const Filter = (props: Props) => {
           </span>
           <span
             className={`py-3 px-5 ${
-              props.selectedCategories.includes("Jackets&Coats") ? "bg-purple-50" : ""
+              props.selectedCategories && props.selectedCategories.includes("Jackets&Coats") ? "bg-purple-500" : ""
             }`}
             onClick={() => toggleCategory("Jackets&Coats")}
           >
@@ -199,14 +198,14 @@ const Filter = (props: Props) => {
                   <label htmlFor="" className="text-[15px] opacity-75">Min</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1">$</span>
-                    <input className="w-full outline-none border-[1px] rounded-lg px-2 text-center py-[2px]" type="number" name="min" onChange={handleMinChange} value={props.price.min}/>
+                    <input className="w-full outline-none border-[1px] rounded-lg px-2 text-center py-[2px]" type="number" name="min" onChange={handleMinChange} value={props.price?.min}/>
                   </div>
               </div>
               <div className="flex flex-col justify-center items-center">
                   <label htmlFor="" className="text-[15px] opacity-75">Max</label>
                   <div className="relative">
                     <span className="absolute left-3 top-1">$</span>
-                    <input className="w-full outline-none border-[1px] rounded-lg px-2 text-center py-[2px]" type="number" name="max" onChange={handleMaxChange} value={props.price.max}/>
+                    <input className="w-full outline-none border-[1px] rounded-lg px-2 text-center py-[2px]" type="number" name="max" onChange={handleMaxChange} value={props.price?.max}/>
                   </div>
               </div>
             </div>
@@ -216,12 +215,12 @@ const Filter = (props: Props) => {
               <h1 className="text-neutral-800">Colors</h1>
             </div>
             <ul className="grid grid-cols-4 px-5 gap-5">
-                {allHexValue.map((hexValue,index) => (
+                {allHexValue && allHexValue.map((hexvalue,index) => (
                   <li
                   key={index}
-                  className={`w-[40px] h-[40px] rounded-2xl border-[0.5x] border-neutral-300 cursor-pointer ${props.selectedAllHexValues.includes(`#${hexValue}`) ? "shadow-2xl opacity-25": ""}`}
-                  style={{backgroundColor:`#${hexValue}`}}
-                  onClick={()=>toggleColor(`#${hexValue}`)}
+                  className={`w-[40px] h-[40px] rounded-2xl border-[0.5x] border-neutral-300 cursor-pointer ${props.selectedAllHexValues.includes(`#${hexvalue}`) ? "shadow-2xl opacity-25": ""}`}
+                  style={{backgroundColor:`#${hexvalue}`}}
+                  onClick={()=>toggleColor(`#${hexvalue}`)}
                   >
 
                   </li>
@@ -234,37 +233,37 @@ const Filter = (props: Props) => {
             </div>
             <ul className='grid grid-cols-4 px-5 gap-5'>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('SM') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('SM') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('SM')}
                         >
                             SM
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('MD') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('MD') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('MD')}
                         >
                             MD
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('XL') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('XL') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('XL')}
                         >
                             XL
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('2XL') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('2XL') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('2XL')}
                         >
                             2XL
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('3XL') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('3XL') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('3XL')}
                         >
                             3XL
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize.includes('4XL') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${props.selectedSize?.includes('4XL') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => toggleSize('2XL')}
                         >
                             4XL
