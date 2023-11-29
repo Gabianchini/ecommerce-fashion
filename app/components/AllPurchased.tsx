@@ -29,9 +29,9 @@ const Allpurchased = async ({userId}: Props) => {
                 <div>
                     <h1 className='text-2xl mb-3'>{cartProduct?.title}</h1>
                     <h2 className='mb-2 text-neutral-800'>Price: {cartProduct?.price}</h2>
-                    <h3 className='text-sm text-neutral-700 mb-2'>Category: {cartProduct?.category}</h3>
-                    <h3 className='text-sm text-neutral-700 mb-2'>Style: {cartProduct?.style}</h3>
-                    <h3 className='text-sm text-neutral-700 mb-2'>Store: {cartProduct?.store}</h3>
+                    <h3 className='text-sm text-neutral-900 mb-2'>Category: {cartProduct?.category}</h3>
+                    <h3 className='text-sm text-neutral-900 mb-2'>Style: {cartProduct?.style}</h3>
+                    <h3 className='text-sm text-neutral-900 mb-2'>Store: {cartProduct?.store}</h3>
                     <p className='text-green-600'>Purchased <BsCheck2All size={20} className='text-green-600'/></p>
                 </div>
                 <Link href={`/dashboard/${cartProduct?.id}`}>

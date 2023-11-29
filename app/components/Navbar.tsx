@@ -18,7 +18,7 @@ const Navbar = (props: Props) => {
   const SignOut = () => {
     if (session && session.user) {
       return (
-        <ul className="py-5 px-1 text-neutral-700">
+        <ul className="py-5 px-1 text-neutral-900">
           <li className="hover:bg-gray-100 hover:text-neutral-900 px-5 py-2 cursor-pointer">
             {session.user.name}
           </li>
@@ -54,7 +54,7 @@ const Navbar = (props: Props) => {
             <a href="/">Trend</a>{' '}
           </div>
           <nav className="max-md:hidden">
-            <ul className="flex items-center lg:space-x-10 space-x-7 opacity-70 text-[15px]">
+            <ul className="flex items-center lg:space-x-10 space-x-7  text-[15px]">
               <li>
                 <a href="/" className="py-3 inline-block w-full">
                   Shop
@@ -122,7 +122,7 @@ const Navbar = (props: Props) => {
           showNav ? 'pb-4 px-5' : 'h-0 invisible opacity-0'
         }`}
       >
-        <ul className="flex flex-col text-[15px] opacity-75 px-2">
+        <ul className="flex flex-col text-[15px] px-2">
           <li>
             <a href="/shop" className="py-3 inline-block w-full">
               Shop
@@ -147,7 +147,7 @@ const Navbar = (props: Props) => {
             autoComplete="false"
           />
           <button>
-            <BiSearch size={20} className="flex opacity-50" />
+            <BiSearch size={20} className="flex" />
           </button>
         </div>
       </div>

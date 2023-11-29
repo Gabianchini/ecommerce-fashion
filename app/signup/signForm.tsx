@@ -102,7 +102,7 @@ const SignForm = (props: Props) => {
             </button>
             <Link
               href='/signin'
-              className='text-sm shadow-md text-center mt-5 text-neutral-700'
+              className='text-sm shadow-md text-center mt-5 text-neutral-900'
             >
               Already have an account
             </Link>

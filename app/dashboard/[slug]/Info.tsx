@@ -54,7 +54,7 @@ const Info:React.FC<Props> = ({title,description,id,price,color,size,userId,stor
             <ReactStars value={rating} size={20}/>
             <span className='flex items-start space-x-3'>
                 <FaRegCommentDots size={22} />
-                <span className='opacity-70 text-sm'>
+                <span className=' text-sm'>
                     {numbercomments} comments
                 </span>
             </span>
@@ -95,7 +95,7 @@ const Info:React.FC<Props> = ({title,description,id,price,color,size,userId,stor
             </div>
             <hr  className='w-9/12 mt-10'/>
 
-            <div className='grid grid-cols-2 gap-10 opacity-70 mt-5'>
+            <div className='grid grid-cols-2 gap-10 mt-5'>
                 <span className='text-sm fles items-center space-x-4'>
                     <span className='p-2 bg-gray-100 inline-block rounded-full'>
                         <CiCreditCard1 size={24} />

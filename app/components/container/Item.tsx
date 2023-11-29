@@ -24,7 +24,7 @@ if(products.length === 0){
                             <div className="flex items-center justify-between mt-4">
                                 <div className="text-[14px] font-medium max-w-[150px] whitespace-nowrap overflow-hidden">
                                     <h1>{product.title}</h1>
-                                    <p className="text-[13px] opacity-60">
+                                    <p className="text-[13px]">
                                         {product.store}
                                     </p>
                                 </div>

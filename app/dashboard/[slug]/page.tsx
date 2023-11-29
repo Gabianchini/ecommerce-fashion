@@ -69,7 +69,7 @@ export default async function Page({params}:{params:{slug:string}}){
                                     <p className='text-sm text-purple-500'>{product.store}</p>
                                 </div>
                             </div>
-                            <div style={{borderColor:`{${product.color.split(',').pop()}}`}} className={`leading-6 text-sm text-neutral-700 h-[200px] border-[1px] rounded-md p-4 overflow-scroll`} dangerouslySetInnerHTML={{__html:product?.description}}></div>
+                            <div style={{borderColor:`{${product.color.split(',').pop()}}`}} className={`leading-6 text-sm text-neutral-900 h-[200px] border-[1px] rounded-md p-4 overflow-scroll`} dangerouslySetInnerHTML={{__html:product?.description}}></div>
                         </div>
                     
                     </div>
