@@ -93,7 +93,7 @@ const Productform = (props: Props) => {
         <div>
             <Navbar/>
         </div>
-        <h1 className='text-3xl font-semibold py-6'>Add your Product n SEINE</h1>
+        <h1 className='text-3xl font-semibold py-6'>Add your Product n Trend</h1>
         <div className='text-black mt-4'>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                 <div>

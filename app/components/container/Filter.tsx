@@ -119,9 +119,9 @@ const Filter = (props: Props) => {
         className={`md:w-[250px] border-l-[0.5px] border-r-[0.5px] ${showFilter ? "max-md:w-[250px]":"w-0 max-md:invisible"}`}>
         <div className="flex items-center justify-between px-5 py-4 border-b-[0.5px]">
           <h1 className="text-neutral-800">Filters</h1>
-          <BsSliders2Vertical size={20} className="text-neutral-600" />
+          <BsSliders2Vertical size={20} className="text-neutral-700" />
         </div>
-        <div className="flex flex-col py-3 pb-5 text-sm text-neutral-600 border-b-[0.5px]">
+        <div className="flex flex-col py-3 pb-5 text-sm text-neutral-700 border-b-[0.5px]">
           <span
             className={`py-3 px-5 ${
               props.selectedCategories && props.selectedCategories.includes("Blouse") ? "bg-purple-500" : ""
@@ -145,7 +145,7 @@ const Filter = (props: Props) => {
             }`}
             onClick={() => toggleCategory("Denim&Jeans")}
           >
-            Denim&Jeans
+            Denim and Jeans
           </span>
           <span
             className={`py-3 px-5 ${
@@ -177,7 +177,7 @@ const Filter = (props: Props) => {
             }`}
             onClick={() => toggleCategory("Tops&tees")}
           >
-            Tops&tees
+            Tops and tees
           </span>
           <span
             className={`py-3 px-5 ${
@@ -185,13 +185,13 @@ const Filter = (props: Props) => {
             }`}
             onClick={() => toggleCategory("Jackets&Coats")}
           >
-            Jackets&Coats
+            Jackets and Coats
           </span>
         </div>
         <div className="border-b-[0.5px] pb-10">
             <div className="flex items-center justify-between px-5 py-4 border-b-[0.5px] mb-5">
               <h1 className="text-neutral-800">Prices</h1>
-              <BsChevronUp size={18} className="text-neutral-600"/>            
+              <BsChevronUp size={18} className="text-neutral-700"/>            
             </div>
             <div className="grid grid-cols-2 gap-5 px-5 overflow-hidden">
               <div className="flex flex-col justify-center items-center">
