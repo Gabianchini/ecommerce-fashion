@@ -12,6 +12,8 @@ const Page = (props: Props) => {
     const [selectedSize, setSelectedSize] = useState<string[]>([])
     const [allHexValues, setAllHexValues] = useState<string[]>([])
     const [selectedHexValues, setSelectedHexValues] = useState<string[]>([])
+    const [selectedAllHexValues, setSelectedAllHexValues] = useState<string[]>([])
+   
     const [price, setPrice] = useState({
         min:0,
         max:10,
@@ -61,9 +63,8 @@ const Page = (props: Props) => {
                     selectedSize={selectedSize}
                     setSelectedSize={setSelectedSize}
                     allHexValues={allHexValues}
-                    setAllHexValues={setAllHexValues}
-                    selectedAllHexValues={selectedHexValues}
-                    setSelectedAllHexValues={setSelectedHexValues}
+                    AllHexValues={setAllHexValues}
+                    selectedAllHexValues={setSelectedHexValues}
                     price={price}
                     setPrice={setPrice}
                     />
