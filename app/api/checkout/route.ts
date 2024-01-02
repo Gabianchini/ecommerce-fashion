@@ -2,7 +2,7 @@ import Stripe from "stripe"
 import { NextResponse } from "next/server"
 import prisma from "@/app/prismadb"
 
-const stripe =new Stripe(process.env.STRIPE_SECRET_KEY!, {apiVersion:'2023-08-16',typescript:true})
+const stripe =new Stripe(process.env.STRIPE_SECRET_KEY!, {typescript:true})
 
 const corsHeader = {
     "Access-Control-Allow-Origin":"*",
