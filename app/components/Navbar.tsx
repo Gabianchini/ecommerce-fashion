@@ -13,15 +13,23 @@ const Navbar = (props: Props) => {
   const [showProfile, setShowProfile] = useState<boolean>(false);
   const [showNav, setShowNav] = useState<boolean>(false);
   const { data: session } = useSession();
+ 
   console.log(session?.user);
+
+  function capitalizeUsername(input: string | null | undefined): string {
+    if (!input) {
+        return ''; 
+    }
+    return input.charAt(0).toUpperCase() + input.slice(1);
+}
+
+  const userName: string  = session?.user?.name || '';
+  const capitalizedUsername: string  = capitalizeUsername(userName);
 
   const SignOut = () => {
     if (session && session.user) {
       return (
         <ul className="py-5 px-1 text-neutral-900">
-          <li className="hover:bg-gray-100 hover:text-neutral-900 px-5 py-2 cursor-pointer">
-            {session.user.name}
-          </li>
           <li
             onClick={() => signOut()}
             className="whitespace-nowrap hover:text-red-600 px-5 py-2 cursor-pointer"
@@ -82,11 +90,16 @@ const Navbar = (props: Props) => {
             className="relative cursor-pointer"
           >
             {session?.user?(
+              <div className='flex'>
               <img
                 src={session.user.profileImage || 'profile-user.png'}
-                className="w-[35px] h-[35px] rounded-full object-cover"
+                className="w-[40px] h-[40px] rounded-full object-cover mx-2"
                 alt=""
               />
+              <li className="hover:bg-gray-100 inline-block hover:text-neutral-900 rounded px-2 py-2 cursor-pointer list-none">
+              <span>{capitalizedUsername}</span>
+            </li>
+            </div>
             ) : (
               <Link href="/signin">
               <span>Sign in</span>

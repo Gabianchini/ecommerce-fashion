@@ -212,11 +212,11 @@ const Filter: React.FC<Props> = () => {
                         ))}
                     </ul>
                 </div>
-                <div className='sizes'>
+                <div className='border-b-[0.5px]'>
                     <div className='flex items-center justify-between px-5 py-4 border-b-[0.5px] mb-5'>
                         <h1 className='text-neutral-800'>sizes</h1>
                     </div>
-                    <ul className='grid grid-cols-4 px-5 gap-5'>
+                    <ul className='grid grid-cols-4 px-5 gap-5 mb-4'>
                         <li
                         className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('SM') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => togglesize('SM')}
@@ -248,7 +248,7 @@ const Filter: React.FC<Props> = () => {
                             3XL
                         </li>
                         <li
-                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('4XL') ? 'bg-neutral-900 text-white':''}`}
+                        className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer  ${selectedSize.includes('4XL') ? 'bg-neutral-900 text-white':''}`}
                         onClick={() => togglesize('2XL')}
                         >
                             4XL
