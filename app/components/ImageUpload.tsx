@@ -10,7 +10,7 @@ type Props = {
     imageType: string
 }
 
-const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageType,imageUrls,setImageUrls,handleImageChange}) => {
+const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageUrls,setImageUrls,handleImageChange}) => {
     const onupload = (result:any) => {
         updateInfo(result.info.secure_url)
         const newImageUrl = result.info.secure_url
@@ -26,9 +26,11 @@ const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageType,imageUrls,setIm
         })
     }
   return (
+    
     <div>
         <div className='mb-10'>
-            <CldUploadWidget uploadPreset='s1uamgem' onUpload={onupload}>
+            
+            <CldUploadWidget uploadPreset="w1m9rtft" onUpload={onupload}>
                 {({open}:any) => {
                     function handleOnclick(e: React.MouseEvent<HTMLButtonElement>){
                         e.preventDefault()
@@ -36,7 +38,7 @@ const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageType,imageUrls,setIm
                     }
                     return(
                         <button className='border-[1px] rounded-lg p-1 px-2' onClick={handleOnclick}>
-                           <p>{`Upload ${imageType} Images`}</p> 
+                           <p>{`Upload Images`}</p> 
                         </button>
                     )
                 }}
@@ -51,6 +53,7 @@ const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageType,imageUrls,setIm
             ))}
         </div>
     </div>
+    
   )
 }
 

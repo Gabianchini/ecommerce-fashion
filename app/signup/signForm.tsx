@@ -87,7 +87,6 @@ const SignForm = (props: Props) => {
              Add a Profile Image
             </label>
             <ImageUpload
-              imageType='Profile'
               info={{}}
               updateInfo={(updateInfo) => setUser({ ...user, profileImage: updateInfo })}
               imageUrls={imageUrls}
