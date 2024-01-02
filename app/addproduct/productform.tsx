@@ -184,7 +184,7 @@ const Productform = (props: Props) => {
             <label htmlFor="" className='mt-10 inline-block font-medium'>Description about your product</label>
             <Para setDescription={setDescription} description={formData.description} />
             <label htmlFor="" className='mt-10 inline-block font-medium'>Upload Images</label>
-            <ImageUpload info={info} updateinfo={updateinfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
+            <ImageUpload info={info} updateInfo={updateinfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
             <button onClick={postData} className='text-white mt-10 border-[1px] bg-purple-500 rounded-lg px-5 p-2'>Submit</button>
         </div>
     </div>

@@ -7,7 +7,7 @@ type Props = {
     imageUrls: string[]
     setImageUrls:React.Dispatch<React.SetStateAction<string[]>>
     handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-    imageType: string
+    
 }
 
 const ImageUpload:React.FC<Props>  = ({info,updateInfo,imageUrls,setImageUrls,handleImageChange}) => {
