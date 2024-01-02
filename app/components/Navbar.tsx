@@ -84,7 +84,7 @@ const Navbar = (props: Props) => {
           </nav>
         </div>
         <div className="flex items-center space-x-4">
-          <SearchBar />
+   
           <div
             onClick={() => setShowProfile(!showProfile)}
             className="relative cursor-pointer"
