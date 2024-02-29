@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
   const [showNav, setShowNav] = useState<boolean>(false);
   const { data: session } = useSession();
  
-  console.log(session?.user);
+
 
   function capitalizeUsername(input: string | null | undefined): string {
     if (!input) {
@@ -66,11 +66,6 @@ const Navbar = (props: Props) => {
               <li>
                 <a href="/" className="py-3 inline-block w-full">
                   Shop
-                </a>
-              </li>
-              <li>
-                <a href="filters" className="py-3 inline-block w-full">
-                  Filters
                 </a>
               </li>
               {session?.user && (

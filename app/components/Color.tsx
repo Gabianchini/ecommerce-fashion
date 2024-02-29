@@ -72,7 +72,7 @@ const Color: React.FC<Props> = ({setFormData,Color}) => {
                         </span>
                         <button className="border-[1px] rounded-lg p-1 px-3 text-[14px]"
                         onClick={() => handleDeleteColor(index)}>
-                            delete
+                            Delete
                         </button>
                     </div>
 

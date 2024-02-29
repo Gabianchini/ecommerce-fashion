@@ -14,7 +14,7 @@ if(products.length === 0){
     return(
         <div>
             <h1 className="py-3 text-xl">Clothing</h1>
-            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-20 gap-12">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 md:gap-20 gap-12">
                 {products.map((product) => (
                     <div key={product.id}>
                         <Link href={`/dashboard/${product.id}`}>

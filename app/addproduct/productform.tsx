@@ -38,12 +38,12 @@ const Productform = (props: Props) => {
     const [imageUrls, setImageUrls] =useState<string[]>([])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [name]:value
-        })
-    }
+            [name]: value,
+        });
+    };
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.name === "price" ? parseInt(e.target.value):parseInt(e.target.value)
         const inventory = e.target.name === "inventory" ? parseInt(e.target.value):parseInt(e.target.value)
@@ -93,7 +93,7 @@ const Productform = (props: Props) => {
         <div>
             <Navbar/>
         </div>
-        <h1 className='text-3xl font-semibold py-6'>Add your Product n Trend</h1>
+        <h1 className='text-3xl font-semibold py-6'>Add your Product n SEINE</h1>
         <div className='text-black mt-4'>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                 <div>
