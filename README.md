@@ -37,11 +37,37 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 - Push to the branch: `git push origin feature-name`
 - Submit a pull request.
 
-### Study Content and Tools: 
-[Tutoriais](https://www.youtube.com/@perfect__code_) <br>
-[Documentação Next](https://nextjs.org/docs)<br>
-[Documentação Prisma](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma)<br>
+## Study Content and Tools: 
+[Tutorials](https://www.youtube.com/@perfect__code_) <br>
+[Next.js Doc](https://nextjs.org/docs)<br>
+[Prisma Doc](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma)<br>
 [Download PostgreSql](https://www.postgresql.org/)<br>
 [Cloudinary](https://cloudinary.com/)<br>
 [Use Stripe](https://docs.stripe.com/development)<br>
+
+## Take a look!
+<p>Dashboard:</p><br>
+<img src="./trend2.png" width="450px"><br>
+<p>User:</p><br>
+<img src="./user.png" width="450px"><br>
+<p>SignUp:</P><br>
+<img src="./signup.png" width="450px"><br>
+<p>Signin:</P><br>
+<img src="./login.png" width="450px"><br>
+<p>Stripe:</P><br>
+<img src="./stripe2.png" width="450px"><br>
+<p>My products:</P><br>
+<img src="./my-products.png" width="450px"><br>
+<p>See product:</P><br>
+<img src="./product.png" width="450px"><br>
+<p>Product Review:</P><br>
+<img src="./product-review.png" width="450px"><br>
+<p>Create Product:</p><br>
+<img src="./edit-product.png" width="450px"><br>
+<img src="./color.png" width="450px">
+<img src="./upload image.png" width="450px"><br>
+<p>Cart:</p><br>
+<img src="./Cart.png" width="450px">
+<img src="./emptycart.png" width="450px"><br>
+
 
